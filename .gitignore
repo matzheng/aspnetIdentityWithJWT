@@ -1,3 +1,4 @@
 /packages/
+/AspNetIdentity.WebApi/web.config
 /AspNetIdentity.WebApi/bin/
 /AspNetIdentity.WebApi/obj/
