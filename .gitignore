@@ -2,3 +2,7 @@
 /AspNetIdentity.WebApi/web.config
 /AspNetIdentity.WebApi/bin/
 /AspNetIdentity.WebApi/obj/
+/JsonWebTokensWebApi/bin/
+/JsonWebTokensWebApi/obj/
+/ResourceServer.Api/bin/
+/ResourceServer.Api/obj/

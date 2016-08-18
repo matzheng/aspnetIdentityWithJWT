@@ -19,6 +19,7 @@ namespace AspNetIdentity.WebApi.Controllers
             return Ok(this.AppUserManager.Users.ToList().Select(u => this.TheModelFactory.Create(u)));
         }
 
+        [HttpGet]
         [Route("user/{id:guid}", Name="GetUserById")]
         public async Task<IHttpActionResult> GetUser(string Id)
         {
@@ -70,9 +71,56 @@ namespace AspNetIdentity.WebApi.Controllers
                 return GetErrorResult(addUserResult);
             }
 
+            //#sending emails 
+            //string code = await this.AppUserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+            //var callbackUrl = new Uri(Url.Link("ConfirmEmailRoute", new { userId = user.Id, code = code}));
+            //await this.AppUserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+            //#end
+
             Uri locationHeader = new Uri(Url.Link("GetUserById", new { id = user.Id }));
 
             return Created(locationHeader, TheModelFactory.Create(user));
+        }
+
+        [HttpGet]
+        [Route("ConfirmEmail", Name="ConfirmEmailRoute")]
+        public async Task<IHttpActionResult> ConfirmEmail(string userId = "", string code = "")
+        {
+            if(string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(code))
+            {
+                ModelState.AddModelError("", "User Id and Code are required");
+                return BadRequest(ModelState);
+            }
+
+            IdentityResult result = await this.AppUserManager.ConfirmEmailAsync(userId, code);
+
+            if(result.Succeeded)
+            {
+                return Ok();
+            }
+            else
+            {
+                return GetErrorResult(result);
+            }
+        }
+
+        [HttpDelete]
+        [Route("user/{id:guid}")]
+        public async Task<IHttpActionResult> DeleteUser(string id)
+        {
+            var appUser = await this.AppUserManager.FindByIdAsync(id);
+            if(appUser != null)
+            {
+                IdentityResult result = await this.AppUserManager.DeleteAsync(appUser);
+                if(!result.Succeeded)
+                {
+                    return GetErrorResult(result);
+                }
+
+                return Ok();
+            }
+
+            return NotFound();
         }
     }
 }
