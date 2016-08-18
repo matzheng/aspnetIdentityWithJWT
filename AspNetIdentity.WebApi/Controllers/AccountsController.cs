@@ -13,12 +13,14 @@ namespace AspNetIdentity.WebApi.Controllers
     [RoutePrefix("api/accounts")]
     public class AccountsController : BaseApiController
     {
+        [Authorize]
         [Route("users")]
         public IHttpActionResult GetUsers()
         {
             return Ok(this.AppUserManager.Users.ToList().Select(u => this.TheModelFactory.Create(u)));
         }
 
+        [Authorize]
         [HttpGet]
         [Route("user/{id:guid}", Name="GetUserById")]
         public async Task<IHttpActionResult> GetUser(string Id)
@@ -33,6 +35,7 @@ namespace AspNetIdentity.WebApi.Controllers
             return NotFound();
         }
 
+        [Authorize]
         [Route("user/{username}")]
         public async Task<IHttpActionResult> GetUserByName(string username)
         {
@@ -46,6 +49,7 @@ namespace AspNetIdentity.WebApi.Controllers
             return NotFound();
         }
 
+        [AllowAnonymous]
         [Route("create")]
         public async Task<IHttpActionResult> CreateUser(CreateUserBindingModel createUserModel)
         {
@@ -82,6 +86,7 @@ namespace AspNetIdentity.WebApi.Controllers
             return Created(locationHeader, TheModelFactory.Create(user));
         }
 
+        [AllowAnonymous]
         [HttpGet]
         [Route("ConfirmEmail", Name="ConfirmEmailRoute")]
         public async Task<IHttpActionResult> ConfirmEmail(string userId = "", string code = "")
@@ -104,6 +109,7 @@ namespace AspNetIdentity.WebApi.Controllers
             }
         }
 
+        [Authorize]
         [HttpDelete]
         [Route("user/{id:guid}")]
         public async Task<IHttpActionResult> DeleteUser(string id)
