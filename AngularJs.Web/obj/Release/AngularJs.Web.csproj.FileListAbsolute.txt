@@ -1,0 +1,6 @@
+D:\Documents\Visual Studio 2013\Projects\AspNetIdentity.WebApi\AngularJs.Web\bin\AngularJs.Web.dll.config
+D:\Documents\Visual Studio 2013\Projects\AspNetIdentity.WebApi\AngularJs.Web\bin\AngularJs.Web.dll
+D:\Documents\Visual Studio 2013\Projects\AspNetIdentity.WebApi\AngularJs.Web\bin\AngularJs.Web.pdb
+D:\Documents\Visual Studio 2013\Projects\AspNetIdentity.WebApi\AngularJs.Web\obj\Release\AngularJs.Web.csprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2013\Projects\AspNetIdentity.WebApi\AngularJs.Web\obj\Release\AngularJs.Web.dll
+D:\Documents\Visual Studio 2013\Projects\AspNetIdentity.WebApi\AngularJs.Web\obj\Release\AngularJs.Web.pdb

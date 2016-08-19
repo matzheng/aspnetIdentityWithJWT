@@ -30,6 +30,7 @@ namespace AspNetIdentity.WebApi.Migrations
             //    );
             //
             var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ApplicationDbContext()));
 
             var user = new ApplicationUser()
             {
@@ -43,6 +44,20 @@ namespace AspNetIdentity.WebApi.Migrations
             };
 
             manager.Create(user, "MySuperP@ssword!");
+            if(roleManager.Roles.Count() == 0)
+            {
+                roleManager.Create(new IdentityRole { Name = "SuperAdmin" });
+                roleManager.Create(new IdentityRole { Name = "Admin" });
+                roleManager.Create(new IdentityRole { Name = "User" });
+            }
+
+            var adminUser = manager.FindByName("SuperPowerUser");
+            if(adminUser != null)
+            {
+                manager.AddToRoles(adminUser.Id, new string[]{
+                    "SuperAdmin", "Admin"
+                });
+            }            
         }
     }
 }

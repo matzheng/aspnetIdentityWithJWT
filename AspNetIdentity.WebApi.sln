@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonWebTokensWebApi", "Json
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourceServer.Api", "ResourceServer.Api\ResourceServer.Api.csproj", "{FB956F16-CCF7-4645-8F2F-F47A7DCFCB89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJs.Web", "AngularJs.Web\AngularJs.Web.csproj", "{00BA580B-7C6F-4FC0-993C-C885DB236D42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FB956F16-CCF7-4645-8F2F-F47A7DCFCB89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB956F16-CCF7-4645-8F2F-F47A7DCFCB89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB956F16-CCF7-4645-8F2F-F47A7DCFCB89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00BA580B-7C6F-4FC0-993C-C885DB236D42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00BA580B-7C6F-4FC0-993C-C885DB236D42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00BA580B-7C6F-4FC0-993C-C885DB236D42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00BA580B-7C6F-4FC0-993C-C885DB236D42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
