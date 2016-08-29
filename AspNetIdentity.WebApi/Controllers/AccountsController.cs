@@ -260,5 +260,19 @@ namespace AspNetIdentity.WebApi.Controllers
 
             return Created(locationHeader, TheModelFactory.Create(user));
         }
+
+        [Authorize]
+        [HttpGet]
+        [Route("profile/{username}")]
+        public async Task<IHttpActionResult> GetProfile(string username)
+        {
+            var user = await this.AppUserManager.FindByNameAsync(username);
+            if (user != null)
+            {
+                return Ok(this.TheModelFactory.Create(user));
+            }
+
+            return NotFound();
+        }
     }
 }

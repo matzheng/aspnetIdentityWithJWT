@@ -10,10 +10,10 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/AspNetIdentity.WebApi.dll">
-      <publishTime>08/19/2016 16:47:00</publishTime>
+      <publishTime>08/22/2016 11:49:02</publishTime>
     </File>
     <File Include="bin/AspNetIdentity.WebApi.pdb">
-      <publishTime>08/19/2016 16:47:00</publishTime>
+      <publishTime>08/22/2016 11:49:02</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>08/17/2016 13:22:09</publishTime>

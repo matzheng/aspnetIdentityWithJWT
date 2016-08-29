@@ -10,7 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="app/app.js">
-      <publishTime>08/19/2016 17:35:28</publishTime>
+      <publishTime>08/22/2016 10:55:27</publishTime>
     </File>
     <File Include="app/controllers/associateController.js">
       <publishTime>08/19/2016 15:59:54</publishTime>
@@ -28,7 +28,7 @@
       <publishTime>08/19/2016 15:59:53</publishTime>
     </File>
     <File Include="app/controllers/profileController.js">
-      <publishTime>08/22/2016 09:44:45</publishTime>
+      <publishTime>08/22/2016 12:03:01</publishTime>
     </File>
     <File Include="app/controllers/refreshController.js">
       <publishTime>08/19/2016 15:59:53</publishTime>
@@ -47,6 +47,9 @@
     </File>
     <File Include="app/services/ordersService.js">
       <publishTime>08/19/2016 16:02:57</publishTime>
+    </File>
+    <File Include="app/services/profileService.js">
+      <publishTime>08/22/2016 12:00:56</publishTime>
     </File>
     <File Include="app/services/tokensManagerService.js">
       <publishTime>08/19/2016 16:02:57</publishTime>
@@ -79,7 +82,7 @@
       <publishTime>08/19/2016 17:50:10</publishTime>
     </File>
     <File Include="bin/AngularJs.Web.dll">
-      <publishTime>08/19/2016 17:59:21</publishTime>
+      <publishTime>08/22/2016 12:03:19</publishTime>
     </File>
     <File Include="content/css/bootstrap.min.css">
       <publishTime>10/06/2014 08:34:02</publishTime>
@@ -127,7 +130,7 @@
       <publishTime>10/06/2014 08:34:02</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>08/19/2016 17:37:57</publishTime>
+      <publishTime>08/22/2016 12:03:40</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>08/19/2016 14:53:27</publishTime>

@@ -101,6 +101,7 @@
     <Content Include="app\services\ordersService.js" />
     <Content Include="app\controllers\signupController.js" />
     <Content Include="app\services\authService.js" />
+    <Content Include="app\services\profileService.js" />
     <Content Include="app\services\tokensManagerService.js" />
     <Content Include="app\views\associate.html" />
     <Content Include="app\views\home.html" />
